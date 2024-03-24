@@ -15,6 +15,14 @@ tags: ["astro", "blogging", "learning in public"]
 
 For both Chinese support and markdown support
 
-\begin{equation}
-\i*\i==23
-\end{equation}
+> Hello, world!
+
+```cpp
+#define ll long long
+
+int main() {
+    ll a = 1;
+    while (a) a++;
+    return 0;
+}
+```
