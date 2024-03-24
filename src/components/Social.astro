@@ -1,13 +1,14 @@
 ---
 const { domain, username, platform } = Astro.props;
 ---
-<a href={`https://${domain}/${username}`}>{platform}</a>
-
+<a href={`https://${domain}/${username}`}>
+    <img src={`../../public/social/${platform}.png`}, alt={`${platform}`}></img>
+</a>
 <style>
     a {
         padding: 0.5rem 1rem;
         color: white;
-        background-color: #4c1d95;
         text-decoration: none;
+        margin: auto;
     }
 </style>

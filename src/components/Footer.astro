@@ -2,13 +2,24 @@
 import Social from "./Social.astro"
 ---
 
-<footer>
-    <Social domain="github.com", username="Iuohua", platform="Github" />
-    <Social domain="t.me", username="luohua", platform="Telegram"/>
-</footer>
+<div id="footer">
+    <footer>
+        <span>Author: luohua | 2024-至今</span>
+    <br/>
+        <span>All Rights Reversed</span>
+    <br/>
+        <span>All passages of this website is licensed via CC BY-NC-SA 4.0</span>
+    </footer>
+</div>
 
 <style>
-    footer {
-        color: black;
+    #footer {
+        font-size: 13px;
+        text-shadow: 0 1px #ffffff;
+        /* position: absolute; */
+        bottom: 30px;
+        opacity: .6;
+        width: 100%;
+        text-align: center;
     }
 </style>
