@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css'
 const pageTitle = "关于"
 ---
@@ -19,9 +20,7 @@ const pageTitle = "关于"
 
 <Layout title={pageTitle}>
 	<main>
-        <a href="/">首页</a>
-		<a href="/about/">关于</a>
-		<a href="/blog/">博客</a>
+        <Navigation />
 		<h1>{pageTitle}</span></h1>
 		<ul role="list" class="link-card-grid">
 			<Card

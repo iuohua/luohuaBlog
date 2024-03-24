@@ -1,14 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css'
 ---
 
 <Layout title="luohua's blog.">
 	<main>
-		<a href="/">首页</a>
-		<a href="/about/">关于</a>
-		<a href="/blog/">博客</a>
+		<Navigation />
 		<h1>Welcome to <span class="text-gradient">luohua's blog</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
