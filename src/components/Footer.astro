@@ -1,25 +1,26 @@
 ---
-import Social from "./Social.astro"
+import {COPYRIGHT_NAME, GLOBAL_STYLE} from "../consts";
+import {Card, Link} from '@koibumi-design/solidjs'
+const today = new Date();
 ---
 
-<div id="footer">
-    <footer>
-        <span>Author: luohua | 2024-至今</span>
-    <br/>
-        <span>All Rights Reversed</span>
-    <br/>
-        <span>All passages of this website is licensed via CC BY-NC-SA 4.0</span>
-    </footer>
-</div>
+<footer>
+    <Card
+            variant={GLOBAL_STYLE}
+            id="footer-container"
+    >
+        &copy; {today.getFullYear()}&nbsp;{COPYRIGHT_NAME}. All rights reserved.<br>
+        Powered by <Link href="https://github.com/koibumi-design/astro-blog">Koibumi Design</Link>
+    </Card>
+</footer>
 
 <style>
-    #footer {
-        font-size: 13px;
-        text-shadow: 0 1px #ffffff;
-        /* position: absolute; */
-        bottom: 30px;
-        opacity: .6;
-        width: 100%;
+    #footer-container {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    footer {
         text-align: center;
     }
 </style>
