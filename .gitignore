@@ -1,3 +1,10 @@
+# private key
+.ssh
+
+# editor
+.vscode
+.obsidian
+
 # build output
 dist/
 
@@ -19,12 +26,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-# private key
-.ssh
-
-# editor
-.vscode
 
 # Logs
 logs

@@ -2,15 +2,9 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import {getCollection} from 'astro:content';
 import {SITE_TITLE, SITE_DESCRIPTION, GLOBAL_STYLE, BIO, AVATAR_SRC} from '../consts';
-import GitHubIcon from "../components/icons/GitHubIcon.astro";
 import {Card, Typo} from '@koibumi-design/solidjs'
-import PostCard from "../components/PostCard.astro";
-
-const posts = (await getCollection('blog'))
-    .filter(post => post.data.pinned)
-    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+import FriendCard from '../components/FriendCard.astro';
 
 ---
 
@@ -22,52 +16,34 @@ const posts = (await getCollection('blog'))
 <body>
 <Header/>
 <main>
-    <Card variant={GLOBAL_STYLE} id="avatar-bio">
-        <img src={AVATAR_SRC} alt="avatar"/>
-        <section id="bio">
-            <Typo emphasis={true} variant="h2">
-                {SITE_TITLE}
-            </Typo>
-            <Typo>
-                {BIO}
-            </Typo>
-            <div>
-                <Typo>
-                    <strong>
-                        Contact me:
-                    </strong>
-                </Typo>
-                <div id="contact">
-                    <a class="icon-link" href="https://github.com/Iuohua" target="_blank" aria-label="GitHub">
-                        <img src="/public/social/github.png"></img>
-                    </a>
-                    <a class="icon-link" href="https://t.me/luohua" target="_blank" aria-label="Telegram">
-                        <img src="/public/social/telegram.png"></img>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </Card>
-
-    <Card variant={GLOBAL_STYLE}>
-        <Typo variant="h3">
-            Pinned Posts
-        </Typo>
-    </Card>
-    <section id="pinned-container">
-        {
-            posts.map((post) => (
-                    <PostCard {...post.data} slug={post.slug}/>
-            ))
-        }
-    </section>
-
+    <div class="page-title">
+        <Card variant="glass">
+            <h1><strong>友情链接</strong></h1>
+        </Card>
+    </div>
+    <div class="friend-card-container">
+        <FriendCard avatar="/friends/alice.webp" name="Alice Aierlanta" description="" link="https://blog.aierlanta.net" />
+        <FriendCard avatar="/friends/AnthonySummit.webp" name="AnthonySummit" description="" link="https://csmoe.top" />
+        <FriendCard avatar="/friends/asuka.webp" name="Asuka Minato" description="" link="https://asukaminato.eu.org/" />
+        <FriendCard avatar="/friends/toya.jpg" name="Fuyutsuki Toya" description="" link="https://toya.moe" />
+        <FriendCard avatar="/friends/haruki.webp" name="Haruki Nikaidou" description="" link="https://i.plr.moe" />
+        <FriendCard avatar="/friends/kun.webp" name="KUN" description="" link="https://soft.moe" />
+        <FriendCard avatar="/friends/listder.webp" name="listder" description="" link="https://blog.listder.xyz" />
+        <FriendCard avatar="/friends/shinnku.webp" name="Shinnku Nikaidoou" description="" link="https://nkd.red" />
+        <FriendCard avatar="/friends/yurzhang.webp" name="Yurzhang" description="" link="https://yurzhang.com" />
+    </div>
 </main>
+
 <Footer/>
 </body>
 </html>
 
 <style>
+  .friend-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
     main {
         max-width: 70rem;
         width: 100%;
@@ -133,7 +109,11 @@ const posts = (await getCollection('blog'))
     .icon-link {
         height: 2rem;
         width: 2rem;
-        margin: 3px;
+    }
+
+    .page-title {
+        font-size: x-large;
+        text-align: center;
     }
 
     #pinned-container {
