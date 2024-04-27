@@ -16,7 +16,6 @@
     "@astrojs/sitemap": "^3.1.1",
     "@astrojs/solid-js": "^4.0.1",
     "@koibumi-design/solidjs": "^0.0.8",
-    "@types/katex": "^0.16.7",
     "astro": "^4.5.2",
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
