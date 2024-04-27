@@ -4,7 +4,7 @@ import {Button} from '@koibumi-design/solidjs';
 
 type Props = HTMLAttributes<'a'>;
 
-const {href, class: className, ...props} = Astro.props;
+const {href, class: className} = Astro.props;
 
 const {pathname} = Astro.url;
 const subpath = pathname.match(/[^\/]+/g);
