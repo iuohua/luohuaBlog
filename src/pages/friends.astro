@@ -58,54 +58,7 @@ import FriendCard from '../components/FriendCard.astro';
     main > *:last-child {
         margin-bottom: 0;
     }
-
-    #avatar-bio {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-    }
-
-    #avatar-bio > img {
-        width: 15rem;
-        height: 15rem;
-        border-radius: 50%;
-    }
-
-    #bio {
-        max-width: 20rem;
-    }
-
-    @media (max-width: 700px) {
-        #avatar-bio {
-            flex-direction: column;
-        }
-
-        #bio {
-            max-width: 100%;
-        }
-    }
-
-    #bio > p {
-        line-height: 1.5;
-        letter-spacing: .02rem;
-    }
-
-    #bio > * {
-        margin-bottom: 0.75rem;
-    }
-
-    #bio > *:last-child {
-        margin-bottom: 0;
-    }
-
-    #contact {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: .25rem
-    }
-
+    
     .icon-link {
         height: 2rem;
         width: 2rem;
@@ -114,12 +67,5 @@ import FriendCard from '../components/FriendCard.astro';
     .page-title {
         font-size: x-large;
         text-align: center;
-    }
-
-    #pinned-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1rem;
-        margin-top: -1.5rem;
     }
 </style>
