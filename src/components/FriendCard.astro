@@ -23,8 +23,11 @@ const {avatar, name, description, link} = Astro.props;
       text-align: center;
       transition: transform 0.3s ease;
     }
+
+    .friend-card:hover {
+        transform: scale(1.1); /* Scale up on hover */
+    }
     
-  
     .avatar {
       width: 80px;
       height: 80px;
